@@ -81,15 +81,15 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
 
             if (typeOfMsg === 'text_message') {
                 await Whatsapp.sendSimpleButtons({
-                    message: `Hey ${recipientName}, \nYou are speaking to a chatbot.\nWhat do you want to do next?`,
+                    message: `Buongiorno ${recipientName}, \nDove vuole prenotare?`,
                     recipientPhone: recipientPhone,
                     listOfButtons: [
                         {
-                            title: 'View some products',
+                            title: 'Ottagono',
                             id: 'see_categories',
                         },
                         {
-                            title: 'Speak to a human',
+                            title: 'Privitera',
                             id: 'speak_to_human',
                         },
                     ],
